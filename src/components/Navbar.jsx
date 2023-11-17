@@ -5,7 +5,7 @@ const Navbar = () => {
 		<div class='flex'>
 			<nav class='text-2xl pt-5 	'>
 				<div class=''>
-					<div>Profile</div>
+					<div class='text-2xl font-semibold text-blue-600'>Profile</div>
 					<div>Messages</div>
 					<div>News</div>
 					<div>Music</div>
@@ -14,8 +14,8 @@ const Navbar = () => {
 			</nav>
 			<div class='flex pl-40 pt-5'>
 				<img
-					class='rounded-md'
-					src='https://i.pinimg.com/originals/6c/73/75/6c737506872effa6caac3d6a20ba2b53.jpg'
+					class='rounded-xl'
+					src='https://i.pinimg.com/originals/b4/1c/3c/b41c3ca065b9eaa404d01b4676744ad7.png'
 					width={500}
 				/>
 			</div>
