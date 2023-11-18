@@ -3,13 +3,13 @@ import React from 'react'
 const Navbar = () => {
 	return (
 		<div class='flex'>
-			<nav class='text-2xl pt-5 	'>
+			<nav class='text-2xl pt-5'>
 				<div class=''>
-					<div class='text-2xl font-semibold text-blue-600'>Profile</div>
-					<div>Messages</div>
-					<div>News</div>
-					<div>Music</div>
-					<div class='pt-2'>Settings</div>
+					<div class='text-green-300 pb-1'>Profile</div>
+					<div class='pb-1'>Messages</div>
+					<div class='pb-1'>News</div>
+					<div class='pb-1'>Music</div>
+					<div class='pb-2'>Settings</div>
 				</div>
 			</nav>
 			<div class='flex pl-40 pt-5'>
