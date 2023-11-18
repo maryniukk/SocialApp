@@ -3,9 +3,9 @@ import React from 'react'
 const Navbar = () => {
 	return (
 		<div class='flex'>
-			<nav class='text-2xl pt-5'>
+			<nav class='text-xl pt-5'>
 				<div class=''>
-					<div class='text-green-300 pb-1'>Profile</div>
+					<div class=' text-pink-500 text-3xl font-medium'>Profile</div>
 					<div class='pb-1'>Messages</div>
 					<div class='pb-1'>News</div>
 					<div class='pb-1'>Music</div>
