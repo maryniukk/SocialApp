@@ -1,9 +1,10 @@
 import React from 'react'
 import './App.css'
-import Header from './components/Header'
-import MyPosts from './components/MyPosts'
-import Navbar from './components/Navbar'
-import Profile from './components/Profile'
+import MyPosts from './MyPosts'
+import Header from './components/Header/Header'
+import Navbar from './components/Navbar/Navbar'
+import Post from './components/Profile/Post'
+import Profile from './components/Profile/Profile'
 import './index.css'
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
 			<Header />
 			<Navbar />
 			<Profile />
+			<Post />
 			<MyPosts />
 		</div>
 	)
