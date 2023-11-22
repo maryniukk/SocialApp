@@ -6,15 +6,15 @@ const MyPosts = () => {
 			<div>My posts</div>
 			<div>
 				<label
-					for='default-input'
-					class='block text-gray-700 text-sm font-bold mb-2'
+					htmlFor='default-input'
+					className='block text-gray-700 text-sm font-bold mb-2'
 				></label>
 				<input
-					class='border rounded-md border-slate-500'
+					className='border rounded-md border-slate-500'
 					type='text'
 					id='default-input'
 				></input>
-				<button class=' bg-blue-400 text-black text-sm pt-2 pb-2 rounded-md pl-2 pr-2 ml-4 hover:bg-blue-500 transition duration-300 ease-in-out'>
+				<button className=' bg-blue-400 text-black text-sm pt-2 pb-2 rounded-md pl-2 pr-2 ml-4 hover:bg-blue-500 transition duration-300 ease-in-out'>
 					Add Post
 				</button>
 			</div>
