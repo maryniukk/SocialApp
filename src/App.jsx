@@ -1,5 +1,5 @@
 import React from 'react'
-import { HashRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Dialogs from './components/Dialogs/Dialogs'
 import Header from './components/Header/Header'
@@ -9,21 +9,18 @@ import './index.css'
 
 function App() {
 	return (
-		<HashRouter>
+		<BrowserRouter>
 			<div className='mx-auto max-w-6xl'>
 				<Header />
 				<Navbar />
 				<div className=''>
-					<Dialogs />
 					<Routes>
-						<Route path='/' element={<Profile />} />
-						<Route path='/dialogs' element={<Dialogs />} />
+						<Route path='/Profile' element={<Profile />} />
+						<Route path='/Dialogs' element={<Dialogs />} />
 					</Routes>
 				</div>
-
-				<Profile />
 			</div>
-		</HashRouter>
+		</BrowserRouter>
 	)
 }
 

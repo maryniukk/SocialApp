@@ -10,6 +10,7 @@ const Profile = ({ message }) => {
 			<div className='content text-xl'>
 				<div className='pt-2'>Ava + description</div>
 			</div>
+
 			<MyPosts />
 		</div>
 	)
