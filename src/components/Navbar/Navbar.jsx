@@ -1,31 +1,30 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
-import NavbarImg from './NavbarImg'
+import { NavLink, useLocation } from 'react-router-dom'
 const Navbar = () => {
+	const location = useLocation()
+
+	const isActive = path => {
+		return location.pathname === path ? 'text-blue-500 text-2xl' : ''
+	}
+
 	return (
 		<div className='flex'>
-			<nav className='text-xl pt-5 '>
+			<nav className='text-xl pt-5'>
 				<div className='flex'>
 					<div>
-						<div className='pb-1'>
-							<NavLink to='/Profile'>Profile</NavLink>
+						<div className='pb-1 hover:text-blue-300 transition-all'>
+							<NavLink to='/Profile' className={isActive('/Profile')}>
+								Profile
+							</NavLink>
 						</div>
-						<div className=' text-blue-500 text-3xl font-medium pb-1'>
-							<NavLink to='/Dialogs'>Messages</NavLink>
+						<div className='pb-1  hover:text-blue-300 transition-all'>
+							<NavLink to='/Dialogs' className={isActive('/Dialogs')}>
+								Messages
+							</NavLink>
 						</div>
-						<div className='pb-1'>
-							<NavLink to='#!'>News</NavLink>
-						</div>
-						<div className='pb-1'>
-							<NavLink to='#!'>Music</NavLink>
-						</div>
-						<div className='pb-2'>
-							<NavLink to='#!'>Settings</NavLink>
-						</div>
+						{/* Другие NavLink'и */}
 					</div>
-					<div className='flex'>
-						<NavbarImg />
-					</div>
+					<div className='flex'></div>
 				</div>
 			</nav>
 		</div>

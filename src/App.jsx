@@ -12,8 +12,9 @@ function App() {
 		<BrowserRouter>
 			<div className='mx-auto max-w-6xl'>
 				<Header />
-				<Navbar />
-				<div className=''>
+
+				<div className='flex'>
+					<Navbar />
 					<Routes>
 						<Route path='/Profile' element={<Profile />} />
 						<Route path='/Dialogs' element={<Dialogs />} />
