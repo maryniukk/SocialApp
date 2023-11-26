@@ -16,8 +16,8 @@ function App() {
 				<div className='flex'>
 					<Navbar />
 					<Routes>
-						<Route path='/Profile' element={<Profile />} />
-						<Route path='/Dialogs' element={<Dialogs />} />
+						<Route path='/profile/*' element={<Profile />} />
+						<Route path='/dialogs/*' element={<Dialogs />} />
 					</Routes>
 				</div>
 			</div>

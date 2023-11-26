@@ -3,6 +3,7 @@ import Post from './components/Profile/Post'
 const MyPosts = () => {
 	return (
 		<div>
+			<div>Ava + description</div>
 			<div>My posts</div>
 			<div>
 				<label
@@ -14,7 +15,7 @@ const MyPosts = () => {
 					type='text'
 					id='default-input'
 				></input>
-				<button className=' bg-blue-400 text-black text-sm pt-2 pb-2 rounded-md pl-2 pr-2 ml-4 hover:bg-blue-500 transition duration-300 ease-in-out'>
+				<button className=' bg-green-400 text-black text-sm pt-2 pb-2 rounded-md pl-2 pr-2 ml-4 hover:bg-green-500 transition duration-300 ease-in-out'>
 					Add Post
 				</button>
 			</div>
