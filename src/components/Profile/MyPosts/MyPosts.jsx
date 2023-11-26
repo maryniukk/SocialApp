@@ -1,9 +1,8 @@
 import React from 'react'
-import Post from './components/Profile/Post'
+import Post from '../Post'
 const MyPosts = () => {
 	return (
 		<div>
-			<div>Ava + description</div>
 			<div>My posts</div>
 			<div>
 				<label
