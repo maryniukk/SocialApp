@@ -31,16 +31,17 @@ let messagesData = [
 	{ id: 3, message: 'See you soon.' },
 	{ id: 4, message: 'How is your day going?' },
 ]
+let dialogsElements = [
+	<DialogItem name={dialogsData[0].name} id={dialogsData[0].id} />,
+	<DialogItem name={dialogsData[1].name} id={dialogsData[1].id} />,
+	<DialogItem name={dialogsData[2].name} id={dialogsData[2].id} />,
+	<DialogItem name={dialogsData[3].name} id={dialogsData[3].id} />,
+]
 
 const Dialogs = () => {
 	return (
 		<div className='flex pl-20 pt-5'>
-			<div>
-				<DialogItem name={dialogsData[0].name} id={dialogsData[0].id} />
-				<DialogItem name={dialogsData[1].name} id={dialogsData[1].id} />
-				<DialogItem name={dialogsData[2].name} id={dialogsData[2].id} />
-				<DialogItem name={dialogsData[3].name} id={dialogsData[3].id} />
-			</div>
+			<div>{dialogsElements}</div>
 			<div>
 				<div className='pl-20'>
 					<Message message={messagesData[0].message} />
