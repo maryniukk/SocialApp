@@ -1,6 +1,19 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
+let dialogsData = [
+	{ id: 1, name: 'Nikita' },
+	{ id: 2, name: 'Taras' },
+	{ id: 3, name: 'Kirill' },
+	{ id: 4, name: 'Danya' },
+]
+let messages = [
+	{ id: 1, message: 'Hi!' },
+	{ id: 2, message: 'How are you?' },
+	{ id: 3, message: 'See you soon.' },
+	{ id: 4, message: 'How is your day going?' },
+]
+
 const DialogItem = props => {
 	let path = '/Dialogs/' + props.id
 	return (
@@ -19,24 +32,10 @@ const Message = props => {
 	return <div className='text-xl pb-1'>{props.message}</div>
 }
 
-let dialogsData = [
-	{ id: 1, name: 'Nikita' },
-	{ id: 2, name: 'Taras' },
-	{ id: 3, name: 'Kirill' },
-	{ id: 4, name: 'Danya' },
-]
-let messagesData = [
-	{ id: 1, message: 'Hi!' },
-	{ id: 2, message: 'How are you?' },
-	{ id: 3, message: 'See you soon.' },
-	{ id: 4, message: 'How is your day going?' },
-]
-let dialogsElements = [
-	<DialogItem name={dialogsData[0].name} id={dialogsData[0].id} />,
-	<DialogItem name={dialogsData[1].name} id={dialogsData[1].id} />,
-	<DialogItem name={dialogsData[2].name} id={dialogsData[2].id} />,
-	<DialogItem name={dialogsData[3].name} id={dialogsData[3].id} />,
-]
+let dialogsElements = dialogsData.map(dialogs => (
+	<DialogItem name={d.name} id={d.id} />
+))
+let messagesElements = messages.map(m => <Message message={m.message} />)
 
 const Dialogs = () => {
 	return (
