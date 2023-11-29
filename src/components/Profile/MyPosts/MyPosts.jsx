@@ -1,13 +1,20 @@
 import React from 'react'
 import Post from '../Post'
 const MyPosts = () => {
-	let postData = [
+	let posts = [
 		{ id: 1, message: 'Hi, how are you?', likesCount: 12 },
 		{ id: 2, message: 'It is my first post!', likesCount: 11 },
+		{ id: 3, message: 'Blabla', likesCount: 50 },
+		{ id: 4, message: 'Lalalala', likesCount: 5 },
 	]
+	let postElements = posts.map(p => (
+		<Post key={[p.id]} message={p.message} likesCount={p.likesCount} />
+	))
+
 	return (
 		<div>
 			<div>My posts</div>
+
 			<div>
 				<label
 					htmlFor='default-input'
@@ -22,16 +29,7 @@ const MyPosts = () => {
 					Add Post
 				</button>
 			</div>
-			<div>
-				<Post
-					message={postData[0].message}
-					likesCount={postData[0].likesCount}
-				/>
-				<Post
-					message={postData[1].message}
-					likesCount={postData[1].likesCount}
-				/>
-			</div>
+			<div>{postElements}</div>
 		</div>
 	)
 }

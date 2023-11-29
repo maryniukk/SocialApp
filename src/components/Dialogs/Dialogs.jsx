@@ -36,7 +36,6 @@ let dialogsElements = dialogsData.map(d => (
 	<DialogItem name={d.name} id={d.id} />
 ))
 let messagesElements = messages.map(m => <Message message={m.message} />)
-
 const Dialogs = () => {
 	return (
 		<div className='flex pl-20 pt-5'>
