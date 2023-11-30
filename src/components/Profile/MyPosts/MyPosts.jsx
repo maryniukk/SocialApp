@@ -14,7 +14,6 @@ const MyPosts = () => {
 	return (
 		<div>
 			<div>My posts</div>
-
 			<div>
 				<label
 					htmlFor='default-input'
