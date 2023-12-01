@@ -1,6 +1,5 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-
 const DialogItem = props => {
 	let path = '/Dialogs/' + props.id
 	return (
@@ -20,7 +19,7 @@ const Message = props => {
 }
 
 let dialogsData = [
-	{ id: 1, name: 'Nikita' },
+	{ id: 1, name: 'Nikita'},
 	{ id: 2, name: 'Taras' },
 	{ id: 3, name: 'Kirill' },
 	{ id: 4, name: 'Danya' },
