@@ -1,9 +1,10 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+
 const DialogItem = props => {
 	let path = '/Dialogs/' + props.id
 	return (
-		<div>
+		<div key={props.id}>
 			<NavLink
 				className='text-xl hover:text-green-500 transition-all'
 				to={path}
@@ -15,11 +16,15 @@ const DialogItem = props => {
 }
 
 const Message = props => {
-	return <div className='text-xl pb-1'>{props.message}</div>
+	return (
+		<div className='text-xl pb-1' key={props.id}>
+			{props.message}
+		</div>
+	)
 }
 
 let dialogsData = [
-	{ id: 1, name: 'Nikita'},
+	{ id: 1, name: 'Nikita' },
 	{ id: 2, name: 'Taras' },
 	{ id: 3, name: 'Kirill' },
 	{ id: 4, name: 'Danya' },
@@ -32,9 +37,12 @@ let messages = [
 ]
 
 let dialogsElements = dialogsData.map(d => (
-	<DialogItem name={d.name} id={d.id} />
+	<DialogItem key={d.id} name={d.name} id={d.id} />
 ))
-let messagesElements = messages.map(m => <Message message={m.message} />)
+let messagesElements = messages.map(m => (
+	<Message key={m.id} id={m.id} message={m.message} />
+))
+
 const Dialogs = () => {
 	return (
 		<div className='flex pl-20 pt-5'>

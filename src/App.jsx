@@ -7,7 +7,7 @@ import Navbar from './components/Navbar/Navbar'
 import Profile from './components/Profile/ProfileInfo/Profile'
 import './index.css'
 
-function App() {
+function App(props) {
 	return (
 		<BrowserRouter>
 			<div className='mx-auto max-w-6xl'>
@@ -15,8 +15,8 @@ function App() {
 				<div className='flex'>
 					<Navbar />
 					<Routes>
-						<Route path='/profile' element={<Profile />} />
 						<Route path='/dialogs' element={<Dialogs />} />
+						<Route path='/profile' element={<Profile posts={props.posts} />} />
 					</Routes>
 				</div>
 			</div>
