@@ -8,7 +8,7 @@ const MyPosts = props => {
 	return (
 		<div>
 			<div>My posts</div>
-			<div>
+			<div className='pb-5'>
 				<label
 					htmlFor='default-input'
 					className='block text-gray-700 text-sm font-bold mb-2'
@@ -18,7 +18,7 @@ const MyPosts = props => {
 					type='text'
 					id='default-input'
 				></input>
-				<button className=' bg-green-400 text-black text-sm pt-2 pb-2 rounded-md pl-2 pr-2 ml-4 hover:bg-green-500 transition duration-300 ease-in-out'>
+				<button className=' bg-green-400 text-black text-sm pt-2 pb-2 rounded-md pl-2 pr-2 ml-4 hover:bg-green-500 transition duration-300 ease-in-out '>
 					Add Post
 				</button>
 			</div>

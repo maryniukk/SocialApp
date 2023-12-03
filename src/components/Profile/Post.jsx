@@ -4,7 +4,7 @@ const Post = ({ message }) => {
 	return (
 		<div className='content text-lg'>
 			<div>
-				<div className='flex'>
+				<div className='flex pb-5'>
 					<img
 						src='https://i.pinimg.com/originals/ea/53/3e/ea533ecbfd904d9f49e404a2813daf93.png'
 						alt=''

@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 const DialogItem = props => {
 	let path = '/Dialogs/' + props.id
 	return (
-		<div key={props.id}>
+		<div key={props.id} className='pb-5'>
 			<NavLink
 				className='text-xl hover:text-green-500 transition-all'
 				to={path}
@@ -17,33 +17,21 @@ const DialogItem = props => {
 
 const Message = props => {
 	return (
-		<div className='text-xl pb-1' key={props.id}>
+		<div className='text-xl pb-5' key={props.id}>
 			{props.message}
 		</div>
 	)
 }
 
-let dialogsData = [
-	{ id: 1, name: 'Nikita' },
-	{ id: 2, name: 'Taras' },
-	{ id: 3, name: 'Kirill' },
-	{ id: 4, name: 'Danya' },
-]
-let messages = [
-	{ id: 1, message: 'Hi!' },
-	{ id: 2, message: 'How are you?' },
-	{ id: 3, message: 'See you soon.' },
-	{ id: 4, message: 'How is your day going?' },
-]
+const Dialogs = ({ dialogsData, messages }) => {
+	let dialogsElements = dialogsData.map(d => (
+		<DialogItem key={d.id} name={d.name} id={d.id} />
+	))
+	let messagesElements = messages.map(m => (
+		<Message key={m.id} id={m.id} message={m.message} />
+	))
 
-let dialogsElements = dialogsData.map(d => (
-	<DialogItem key={d.id} name={d.name} id={d.id} />
-))
-let messagesElements = messages.map(m => (
-	<Message key={m.id} id={m.id} message={m.message} />
-))
-
-const Dialogs = () => {
+	// Возвращаем разметку, используя сгенерированные элементы
 	return (
 		<div className='flex pl-20 pt-5'>
 			<div>{dialogsElements}</div>

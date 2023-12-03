@@ -15,7 +15,15 @@ function App(props) {
 				<div className='flex'>
 					<Navbar />
 					<Routes>
-						<Route path='/dialogs' element={<Dialogs />} />
+						<Route
+							path='/dialogs'
+							element={
+								<Dialogs
+									dialogsData={props.dialogsData}
+									messages={props.messages}
+								/>
+							}
+						/>
 						<Route path='/profile' element={<Profile posts={props.posts} />} />
 					</Routes>
 				</div>
