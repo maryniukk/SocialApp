@@ -12,12 +12,12 @@ const Navbar = () => {
 			<nav className='text-xl pt-5'>
 				<div className='flex'>
 					<div>
-						<div className='pb-1 hover:text-green-700 transition-all'>
+						<div className='pb-2 hover:text-green-700 transition-all'>
 							<NavLink to='/Profile' className={isActive('/Profile')}>
 								Profile
 							</NavLink>
 						</div>
-						<div className='pb-1  hover:text-green-700 transition-all'>
+						<div className='pb-2  hover:text-green-700 transition-all'>
 							<NavLink to='/Dialogs' className={isActive('/Dialogs')}>
 								Messages
 							</NavLink>
