@@ -3,29 +3,10 @@ import ReactDOM from 'react-dom/client'
 import './App.css'
 import App from './App.jsx'
 import './index.css'
-
-let posts = [
-	{ id: 1, message: 'Hi, how are you?', likesCount: 12 },
-	{ id: 2, message: 'It is my first post!', likesCount: 11 },
-	{ id: 3, message: 'Blabla', likesCount: 50 },
-	{ id: 4, message: 'Lalalala', likesCount: 5 },
-]
-
-let dialogsData = [
-	{ id: 1, name: 'Nikita' },
-	{ id: 2, name: 'Taras' },
-	{ id: 3, name: 'Kirill' },
-	{ id: 4, name: 'Danya' },
-]
-let messages = [
-	{ id: 1, message: 'Hi!' },
-	{ id: 2, message: 'How are you?' },
-	{ id: 3, message: 'See you soon.' },
-	{ id: 4, message: 'How is your day going?' },
-]
+import state from './redux/state.js'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<React.StrictMode>
-		<App posts={posts} dialogsData={dialogsData} messages={messages} />
+		<App appState={state} />
 	</React.StrictMode>
 )
