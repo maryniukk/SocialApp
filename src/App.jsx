@@ -19,14 +19,14 @@ function App(props) {
 							path='/dialogs'
 							element={
 								<Dialogs
-									dialogsData={props.appState.dialogsData}
-									messages={props.appState.messages}
+									dialogsData={props.appState.dialogsPage.dialogsData}
+									messages={props.appState.dialogsPage.messages}
 								/>
 							}
 						/>
 						<Route
 							path='/profile'
-							element={<Profile posts={props.appState.posts} />}
+							element={<Profile posts={props.appState.profilePage.posts} />}
 						/>
 					</Routes>
 				</div>
