@@ -5,6 +5,10 @@ const MyPosts = props => {
 		<Post key={[p.id]} message={p.message} likesCount={p.likesCount} />
 	))
 
+	let addPost = () => {
+		alert('You have successfully added a post!')
+	}
+
 	return (
 		<div>
 			<div>My posts</div>
@@ -18,7 +22,10 @@ const MyPosts = props => {
 					type='text'
 					id='default-input'
 				></input>
-				<button className=' bg-green-400 text-black text-sm pt-2 pb-2 rounded-md pl-2 pr-2 ml-4 hover:bg-green-500 transition duration-300 ease-in-out '>
+				<button
+					onClick={addPost}
+					className=' bg-gray-400 text-black text-sm pt-2 pb-2 rounded-md pl-2 pr-2 ml-4 hover:bg-gray-500 transition duration-300 ease-in-out '
+				>
 					Add Post
 				</button>
 			</div>

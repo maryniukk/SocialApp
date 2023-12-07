@@ -5,10 +5,7 @@ const DialogItem = props => {
 	let path = '/Dialogs/' + props.id
 	return (
 		<div key={props.id} className='pb-5'>
-			<NavLink
-				className='text-xl hover:text-green-500 transition-all'
-				to={path}
-			>
+			<NavLink className='text-xl hover:text-gray-500 transition-all' to={path}>
 				{props.name}
 			</NavLink>
 		</div>
