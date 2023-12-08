@@ -5,7 +5,6 @@ const Navbar = () => {
 	const isActive = path => {
 		return location.pathname === path ? 'text-gray-400 text-2xl' : ''
 	}
-	rafce
 	return (
 		<div className='flex'>
 			<nav className='text-xl pt-5'>

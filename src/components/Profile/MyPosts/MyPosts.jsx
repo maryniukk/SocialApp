@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { createRef } from 'react'
 import Post from '../Post'
 const MyPosts = props => {
 	let postElements = props.posts.map(p => (
 		<Post key={[p.id]} message={p.message} likesCount={p.likesCount} />
 	))
 
+	let newPostElement = createRef()
+
 	let addPost = () => {
-		alert('You have successfully added a post!')
+		let text = newPostElement.current.value
+		alert(text)
 	}
 
 	return (
@@ -21,6 +24,7 @@ const MyPosts = props => {
 					className='border rounded-md border-slate-500'
 					type='text'
 					id='default-input'
+					ref={newPostElement}
 				></input>
 				<button
 					onClick={addPost}
