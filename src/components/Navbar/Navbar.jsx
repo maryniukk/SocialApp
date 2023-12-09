@@ -12,7 +12,7 @@ const Navbar = () => {
 					<div>
 						<div className='pb-2 hover:text-gray-700 transition-all'>
 							<NavLink to='/Profile' className={isActive('/Profile')}>
-								Profile123
+								Profile
 							</NavLink>
 						</div>
 						<div className='pb-2  hover:text-gray-700 transition-all'>
