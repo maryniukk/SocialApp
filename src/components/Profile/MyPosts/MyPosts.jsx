@@ -1,18 +1,16 @@
 import React, { createRef } from 'react'
 import Post from '../Post'
 const MyPosts = props => {
-	// Создаем переменную, которая находит все посты с пропсов,  мапит их id, message, likesCount
 	let postElements = props.posts.map(p => (
 		<Post key={[p.id]} message={p.message} likesCount={p.likesCount} />
 	))
-	// Далее создается ref, т.е ссылка на отдельную страницу
+
 	let newPostElement = createRef()
-	// Функция которая добавляет с про
+
 	let addPost = () => {
-		let text = newPostElement.current.value //Получаем значение что ввел user
-		props.addPost(text) // Вызывывает эту функцию, с тем что ввел пользователь
+		let text = newPostElement.current.value
+		props.addPost(text)
 	}
-	// addPost извлекает текст из поля ввода и передает его
 
 	return (
 		<div>
