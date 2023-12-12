@@ -1,10 +1,12 @@
 import React from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
+
 const Navbar = () => {
 	const location = useLocation()
 	const isActive = path => {
 		return location.pathname === path ? 'text-gray-400 text-2xl' : ''
 	}
+
 	return (
 		<div className='flex'>
 			<nav className='text-xl pt-5'>
