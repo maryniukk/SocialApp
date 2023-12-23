@@ -6,8 +6,11 @@ import './index.css'
 import state, { addPost } from './redux/state.js'
 
 addPost('SamuraiJs.com')
-ReactDOM.createRoot(document.getElementById('root')).render(
-	<React.StrictMode>
-		<App appState={state} addPost={addPost} />
-	</React.StrictMode>
-)
+export let renderEntireThree = () => {
+	ReactDOM.createRoot(document.getElementById('root')).render(
+		<React.StrictMode>
+			<App appState={state} addPost={addPost} />
+		</React.StrictMode>
+	)
+}
+renderEntireThree()
