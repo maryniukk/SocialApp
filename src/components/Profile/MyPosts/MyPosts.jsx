@@ -1,8 +1,9 @@
-import React, { createRef } from 'react'
+import React, { createRef } from 'react' // Добавляем createRef из React
 import Post from '../Post'
+
 const MyPosts = props => {
 	let postElements = props.posts.map(p => (
-		<Post key={[p.id]} message={p.message} likesCount={p.likesCount} />
+		<Post key={p.id} message={p.message} likesCount={p.likesCount} />
 	))
 
 	let newPostElement = createRef()
@@ -37,4 +38,5 @@ const MyPosts = props => {
 		</div>
 	)
 }
+
 export default MyPosts
