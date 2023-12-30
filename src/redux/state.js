@@ -6,6 +6,7 @@ let state = {
 			{ id: 3, message: 'Blabla', likesCount: 50 },
 			{ id: 4, message: 'Lalalala', likesCount: 5 },
 		],
+		newPostText: 'it-kamasutra',
 	},
 
 	dialogsPage: {
