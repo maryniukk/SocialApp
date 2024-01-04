@@ -4,7 +4,8 @@ import './App.css'
 import App from './App.jsx'
 import './index.css'
 import { addPost } from './redux/state.js'
-
+//commit 123
+123
 export let rerenderEntireTree = state => {
 	ReactDOM.createRoot(document.getElementById('root')).render(
 		<React.StrictMode>
